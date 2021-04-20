@@ -6,8 +6,9 @@ export default function PageHead({title}) {
     <Head>
       <title>{title}</title>
       <link rel="icon" href="./color-palette.svg"></link>
-      <title>Color Bank — Find Your True Colours</title>
       <meta name="title" content="Color Bank — Find Your True Colours"></meta>
+      <meta property="image" content="./cb.PNG"></meta>
+
       <meta
         name="description"
         content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
@@ -18,7 +19,7 @@ export default function PageHead({title}) {
       <meta
         property="og:description"
         content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
-      <meta property="og:image" content="colourbank.png"></meta>
+      <meta property="og:image" content="./cb.PNG"></meta>
 
       <meta property="twitter:card" content="summary_large_image"></meta>
       <meta property="twitter:url" content="https://colorbank.noahatkins.com/"></meta>
@@ -26,7 +27,7 @@ export default function PageHead({title}) {
       <meta
         property="twitter:description"
         content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
-      <meta property="twitter:image" content="colourbank.png"></meta>
+      <meta property="twitter:image" content="./cb.PNG"></meta>
     </Head>
   );
 }
