@@ -8,7 +8,9 @@ export default function PageHead({title}) {
       <link rel="icon" href="./color-palette.svg"></link>
       <meta name="title" content="Color Bank — Find Your True Colours"></meta>
       <meta property="image" content="/cb.PNG"></meta>
-
+      <meta
+        property="keywords"
+        content="atkins,bank,black,blue,color,green,grey,noah,orange,pink,purple,yellow, noah atkins, color bank, color palette, colour bank"></meta>
       <meta
         name="description"
         content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
