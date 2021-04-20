@@ -4,39 +4,39 @@ export default function getPalette(url) {
 
   if (path === "blue") {
     return [
-      {name: "hi", color: "#6AC5FE"},
+      {name: "Pool Day", color: "#6AC5FE"},
       {name: "Cloud Blue", color: "#51BBFE"},
       {name: "Cool Ice", color: "#34B1FE"},
-      {name: "hi", color: "#0BA1FE"},
-      {name: "hi", color: "#0171B7"},
-      {name: "hi", color: "#01588E"},
-      {name: "hi", color: "#01263D"},
-      {name: "hi", color: "#001B29"},
-      {name: "hi", color: "#000A10"},
+      {name: "Mexican Blue", color: "#0BA1FE"},
+      {name: "Great Lakes", color: "#0171B7"},
+      {name: "Thunderstorm", color: "#01588E"},
+      {name: "Dark Denim", color: "#01263D"},
+      {name: "Moonlit Sky", color: "#001B29"},
+      {name: "Nightfall", color: "#000A10"},
     ];
   } else if (path === "red") {
     return [
       {name: "Spicy Watermelon", color: "#E55454"},
       {name: "Ferrari Red", color: "#E13E3E"},
       {name: "Teacher's Apple", color: "#DE2828"},
-      {name: "Red Red Red", color: "#CD1F1F"},
-      {name: "hi", color: "#B71C1C"},
-      {name: "hi", color: "#A11919"},
-      {name: "Sky Blue", color: "#5F0F0F"},
-      {name: "Cool Ice", color: "#751212"},
-      {name: "hi", color: "#8B1616"},
+      {name: "Rikki Red", color: "#CD1F1F"},
+      {name: "Cartoon Fire", color: "#B71C1C"},
+      {name: "Red Pumpkin", color: "#A11919"},
+      {name: "Stiletto", color: "#8B1616"},
+      {name: "Frosted Cranberry", color: "#751212"},
+      {name: "Toasted Red", color: "#5F0F0F"},
     ];
   } else if (path === "green") {
     return [
-      {name: "hi", color: "#8DF082"},
-      {name: "hi", color: "#78ED6B"},
-      {name: "hi", color: "#63EB54"},
-      {name: "Sky Blue", color: "#4FE83E"},
-      {name: "Cool Ice", color: "#3AE527"},
-      {name: "hi", color: "#2DD91A"},
-      {name: "hi", color: "#28C217"},
-      {name: "hi", color: "#23AB14"},
-      {name: "hi", color: "#1F9412"},
+      {name: "Pale Mint", color: "#8DF082"},
+      {name: "Ripe Honeydew", color: "#78ED6B"},
+      {name: "Serenity", color: "#63EB54"},
+      {name: "Sour Apple", color: "#4FE83E"},
+      {name: "Emerald", color: "#3AE527"},
+      {name: "Dad's Lawn", color: "#2DD91A"},
+      {name: "Put-Put Green", color: "#28C217"},
+      {name: "Hole 18", color: "#23AB14"},
+      {name: "Evergreen", color: "#1F9412"},
     ];
   } else if (path === "black") {
     return [
@@ -98,5 +98,7 @@ export default function getPalette(url) {
       {name: "Cool Ice", color: "#FF6B00"},
       {name: "hi", color: "#E66000"},
     ];
+  } else {
+    return "404";
   }
 }
