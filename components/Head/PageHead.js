@@ -7,7 +7,7 @@ export default function PageHead({title}) {
       <title>{title}</title>
       <link rel="icon" href="./color-palette.svg"></link>
       <meta name="title" content="Color Bank — Find Your True Colours"></meta>
-      <meta property="image" content="./cb.PNG"></meta>
+      <meta property="image" content="/cb.PNG"></meta>
 
       <meta
         name="description"
@@ -27,7 +27,7 @@ export default function PageHead({title}) {
       <meta
         property="twitter:description"
         content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
-      <meta property="twitter:image" content="./cb.PNG"></meta>
+      <meta property="twitter:image" content="/cb.PNG"></meta>
     </Head>
   );
 }
