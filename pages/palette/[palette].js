@@ -6,14 +6,19 @@ import PageHead from "../../components/Head/PageHead";
 export default function Palette() {
   const r = useRouter(null);
   const url = r.query;
-
   const [color, setColor] = useState("");
   const [palette, setPalette] = useState([]);
   const [visible, setVisible] = useState("hidden");
 
   useEffect(() => {
     const pal = getPalette(url.palette);
-    setPalette(pal);
+    if (url.palette) {
+      if (pal === "404") {
+        return r.push("/404");
+      } else {
+        setPalette(pal);
+      }
+    }
   }, [url]);
 
   useEffect(() => {
