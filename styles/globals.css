@@ -319,9 +319,6 @@ h3 {
   #icon {
     font-size: 10px;
   }
-  .formatMenu {
-    font-size: 10px;
-  }
 }
 @media only screen and (max-width: 570px) {
   .formatSelect {
@@ -330,11 +327,12 @@ h3 {
   #icon {
     font-size: 10px;
   }
-  .paletteTitle {
-    font-size: 15px;
-  }
+
   .formatMenu {
     display: none;
+  }
+  .paletteHeader div {
+    flex: none;
   }
 }
 @media only screen and (max-width: 360px) {
