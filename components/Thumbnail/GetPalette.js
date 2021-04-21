@@ -1,7 +1,6 @@
 export default function getPalette(url) {
   var path = "";
   if (url) path = url.toLowerCase();
-
   if (path === "blue") {
     return [
       {name: "Pool Day", color: "#6AC5FE"},

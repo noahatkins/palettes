@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import Thumbnail from "../components/Thumbnail";
+import Thumbnail from "../components/Thumbnail/Thumbnail";
 import PageHead from "../components/Head/PageHead";
 
 export default function Home() {

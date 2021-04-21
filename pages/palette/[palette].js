@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
-import getPalette from "../../components/GetPalette";
+import getPalette from "../../components/Thumbnail/GetPalette";
 import PageHead from "../../components/Head/PageHead";
 
 export default function Palette() {
