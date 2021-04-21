@@ -2,11 +2,14 @@ import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import getPalette from "../../components/Thumbnail/GetPalette";
 import PageHead from "../../components/Head/PageHead";
+import {MdKeyboardArrowDown, MdKeyboardArrowUp} from "react-icons/md";
 
 export default function Palette() {
   const r = useRouter(null);
   const url = r.query;
   const [color, setColor] = useState("");
+  const [colorType, setColorType] = useState("HEX");
+  const [formatMenu, showFormat] = useState(false);
   const [palette, setPalette] = useState([]);
   const [visible, setVisible] = useState("hidden");
 
@@ -47,26 +50,56 @@ export default function Palette() {
   return (
     <>
       <PageHead title={url.palette && `${url.palette.charAt(0).toUpperCase() + url.palette.slice(1)} Palette`} />
+      {formatMenu && (
+        <div className="formatMenu">
+          <div
+            onClick={() => {
+              showFormat(false);
+              setColorType("HEX");
+            }}>
+            HEX — #FFFFFF
+          </div>
+          <div
+            onClick={() => {
+              showFormat(false);
+              setColorType("RGB");
+            }}>
+            RGB — (256, 256, 256)
+          </div>
+        </div>
+      )}
       <div id={visible} className="copyMenu" style={{background: color}}>
         <h1 className="menuText">COPIED {color}!</h1>
       </div>
       <div className="paletteHeader">
-        <div onClick={() => r.push("/")} className="backButton">
-          <div id="triangle"></div>
-          <div className="back">Back</div>
+        <div>
+          <h4 onClick={() => r.push("/")} className="backButton">
+            Back
+          </h4>
         </div>
-        <>
+        <div className="palleteHeaderMid" style={{display: "flex", justifyContent: "center"}}>
+          <span className="formatSelect" onClick={() => showFormat(!formatMenu)}>
+            {colorType} {colorType === "HEX" ? " — #FFFFFF" : " — (256, 256, 256)"}{" "}
+            {formatMenu ? <MdKeyboardArrowUp id="icon" /> : <MdKeyboardArrowDown id="icon" />}
+          </span>
+        </div>
+        <div className="paletteTitle">
           <h2>{url.palette && `${url.palette.charAt(0).toUpperCase() + url.palette.slice(1)} Palette`} </h2>
-        </>
+        </div>
       </div>
       <div className="palette">
         <div className="paletteRow">
-          {palette.map((pal, key) => (
+          {palette.map((pal, key = pal.color) => (
             <span
+              id={key}
               key={key}
               style={{background: pal.color}}
-              onClick={() => {
-                setColor(pal.color);
+              onClick={(e) => {
+                if (colorType === "HEX") {
+                  setColor(pal.color);
+                } else {
+                  setColor(document.getElementById(key).style.backgroundColor);
+                }
                 setVisible("visible");
               }}>
               <button className="copySpan">Copy</button>

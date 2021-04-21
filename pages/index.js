@@ -1,13 +1,34 @@
 import styles from "../styles/Home.module.css";
+import {useState, useEffect, useContext} from "react";
+import {ThemeContext} from "../contexts/ThemeStore";
 import Thumbnail from "../components/Thumbnail/Thumbnail";
 import PageHead from "../components/Head/PageHead";
 
 export default function Home() {
+  const {theme, switchTheme} = useContext(ThemeContext);
   return (
     <div className="homeWrap">
       <PageHead title="Color Bank" />
       <div className="homeHeader">
-        <h1 className={styles.title}>Color Bank</h1>
+        <h1 className={styles.title}>Color Bank — Find Your True Colours</h1>
+        <div>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={theme === "dark"}
+              onChange={() => {
+                if (theme === "light") {
+                  switchTheme("dark");
+                  localStorage.setItem("theme", "dark");
+                } else {
+                  switchTheme("light");
+                  localStorage.setItem("theme", "light");
+                }
+              }}
+            />
+            <span className="slider round"></span>
+          </label>
+        </div>
       </div>
       <div className="thumbnailGrid">
         <Thumbnail path="/palette/red" title="Red" color="red" />

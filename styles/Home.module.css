@@ -8,7 +8,6 @@
 }
 
 .thumbnail {
-  background-color: white;
   padding: 5px;
   border-radius: 5px;
   display: flex;
@@ -24,5 +23,8 @@
 }
 
 .title {
-  color: white;
+  color: var(--secondary);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
 }

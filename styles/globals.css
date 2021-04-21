@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
-
+:root {
+  --primary: ;
+  --secondary: ;
+}
 html,
 body {
-  --primary: #34495e;
-  --secondary: white;
   padding: 0;
   margin: 0;
   background-color: var(--primary);
@@ -71,7 +72,7 @@ a {
   width: fit-content;
   padding: 15px;
   color: #171a21;
-  background-color: white;
+  background-color: var(--secondary);
   align-items: stretch;
 }
 
@@ -95,7 +96,7 @@ a {
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 20px solid var(--primary);
+  border-right: 20px solid var(--secondary);
   margin-right: 5px;
 }
 
@@ -118,23 +119,28 @@ a {
 html {
   margin: 0;
 }
-.backButton:hover {
+h4:hover {
   opacity: 0.8;
+  transform: scale(1.04);
+}
+.h4 {
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 0.2s;
 }
 
 .copySpan {
   position: absolute;
   top: 50%;
   font-family: "Righteous", serif;
-
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   border: none;
   padding: 1vw 3vw;
-  color: white;
+  color: #f7f1e3;
   font-size: 15px;
-  border: 3px rgba(255, 255, 255, 1) solid;
+  border: 3px #f7f1e3 solid;
   background-color: transparent;
   opacity: 0;
   transition: all ease-in-out 0.3s;
@@ -159,7 +165,7 @@ html {
 }
 
 .menuText {
-  color: white;
+  color: #f7f1e3;
   font-family: "Righteous", serif;
   font-size: 7vw;
 }
@@ -171,9 +177,48 @@ html {
 }
 
 .colorName {
-  color: white;
+  color: #f7f1e3;
   position: absolute;
   margin: 10px;
+}
+
+.formatMenu {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+}
+.formatSelect {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 5px 10px 5px 30px;
+  transition: all ease-in-out 0.1s;
+  border-radius: 5px;
+  font-size: 20px;
+  align-items: center;
+}
+
+.formatMenu div {
+  padding: 5px 50px;
+}
+.formatMenu div:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+#icon {
+  margin-left: 20px;
+  font-size: 20px;
+  color: var(--primary);
 }
 #visible {
   visibility: visible;
@@ -186,17 +231,29 @@ html {
   min-height: 90vh;
   max-height: 90vh;
 }
+.paletteHeader div {
+  flex: 1;
+  width: fit-content;
 
+  display: flex;
+}
+.paletteTitle {
+  justify-content: end;
+}
+.paletteHeader div:first-child {
+  margin-right: auto;
+}
+.paletteHeader div:last-child {
+  margin-left: auto;
+}
 .paletteHeader {
   min-height: 10vh;
   max-height: 10vh;
   display: flex;
   align-items: center;
-  background-color: white;
-  color: var(--primary);
-
+  background-color: var(--primary);
+  color: var(--secondary);
   padding: 0 20px;
-  justify-content: space-between;
 }
 
 .thumbnailGrid {
@@ -210,11 +267,16 @@ html {
   min-height: 15vh;
   max-height: 15vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 20px;
 }
-
+.homeHeader h1 {
+  padding: 25px 0 0 5vw;
+}
+.homeHeader div {
+  padding: 25px 5vw 0 0;
+}
 .homeFooter {
   min-height: 10vh;
   max-height: 10vh;
@@ -223,25 +285,128 @@ html {
   align-items: center;
 }
 .homeFooter span {
-  color: white;
+  color: var(--secondary);
 }
 
-.back {
+h4 {
   font-size: 23px;
 }
+
 .paletteRow span:hover {
   opacity: 0.9;
 }
 
 h3 {
-  color: white;
+  color: var(--secondary);
   padding: 5px 0;
   margin: 0;
 }
-
+@media only screen and (max-width: 930px) {
+  .formatSelect {
+    font-size: 15px;
+  }
+  #icon {
+    font-size: 15px;
+  }
+  .formatMenu {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 745px) {
+  .formatSelect {
+    font-size: 10px;
+  }
+  #icon {
+    font-size: 10px;
+  }
+  .formatMenu {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .formatSelect {
+    display: none;
+  }
+  #icon {
+    font-size: 10px;
+  }
+  .paletteTitle {
+    font-size: 15px;
+  }
+  .formatMenu {
+    display: none;
+  }
+}
 @media only screen and (max-width: 360px) {
   .row span {
     height: 55px;
     width: 90px;
   }
+
+  .homeHeader {
+    flex-direction: column;
+    max-height: 20vh;
+  }
+  .homeHeader div {
+    padding: 10px 0 30px 0;
+  }
+  .homeHeader h1 {
+    padding: 30px 0 0px 0;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e272e;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f7f1e3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ffc048;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

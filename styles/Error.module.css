@@ -8,13 +8,13 @@
 }
 
 .wrapper h1 {
-  color: white;
+  color: var(--secondary);
   margin: 0;
   font-size: 3em;
 }
 
 .wrapper h2 {
-  color: white;
+  color: var(--secondary);
   margin: 0;
   font-size: 1em;
 }
@@ -22,8 +22,8 @@
 .wrapper a {
   cursor: pointer;
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
   margin-top: 10px;
   font-size: 1em;
   padding: 5px;
@@ -31,6 +31,6 @@
 }
 
 .wrapper a:hover {
-  background-color: white;
-  color: #34495e;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
