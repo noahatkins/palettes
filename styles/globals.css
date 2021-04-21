@@ -31,14 +31,21 @@ a {
 }
 
 .thumbnail {
-  padding: 5px 5px 0px 5px;
+  padding: 10px 10px 0px 10px;
+  background-color: var(--secondary);
   margin: 5px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   width: fit-content;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
   height: fit-content;
+}
+
+.test {
+  padding: 20px;
+  background-color: white;
 }
 
 .thumbnail:hover {
@@ -49,8 +56,8 @@ a {
   display: flex;
 }
 .row span {
-  height: 75px;
-  width: 110px;
+  height: 65px;
+  width: 100px;
 }
 
 .row .top:first-child {
@@ -297,10 +304,11 @@ h4 {
 }
 
 h3 {
-  color: var(--secondary);
+  color: var(--primary);
   padding: 5px 0;
   margin: 0;
 }
+
 @media only screen and (max-width: 930px) {
   .formatSelect {
     font-size: 15px;
