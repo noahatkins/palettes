@@ -39,27 +39,27 @@ export default function getPalette(url) {
     ];
   } else if (path === "black") {
     return [
-      {name: "", color: "#777777"},
-      {name: "", color: "#6A6A6A"},
-      {name: "", color: "#5D5D5D"},
-      {name: "", color: "#515151"},
-      {name: "", color: "#444444"},
-      {name: "", color: "#373737"},
-      {name: "", color: "#2B2B2B"},
-      {name: "", color: "#1E1E1E"},
-      {name: "", color: "#111111"},
+      {name: "Cloudy Day", color: "#777777"},
+      {name: "Corrupt Silver", color: "#6A6A6A"},
+      {name: "Smooth Grey", color: "#5D5D5D"},
+      {name: "Exhaust", color: "#515151"},
+      {name: "Sunset Shadow", color: "#444444"},
+      {name: "Thick Smoke", color: "#373737"},
+      {name: "Slate Grey", color: "#2B2B2B"},
+      {name: "Charred Coal", color: "#1E1E1E"},
+      {name: "Bland Obsidian", color: "#111111"},
     ];
   } else if (path === "grey") {
     return [
-      {name: "", color: "#E9E9E9"},
-      {name: "", color: "#DCDCDC"},
-      {name: "", color: "#D0D0D0"},
-      {name: "", color: "#C3C3C3"},
-      {name: "", color: "#B6B6B6"},
-      {name: "", color: "#AAAAAA"},
-      {name: "", color: "#9D9D9D"},
-      {name: "", color: "#909090"},
-      {name: "", color: "#838383"},
+      {name: "Dim Snow", color: "#E9E9E9"},
+      {name: "Floral Grey", color: "#DCDCDC"},
+      {name: "Light Fog", color: "#D0D0D0"},
+      {name: "Archaic Bone", color: "#C3C3C3"},
+      {name: "Cement", color: "#B6B6B6"},
+      {name: "Cool Grey", color: "#AAAAAA"},
+      {name: "Nickel", color: "#9D9D9D"},
+      {name: "Ash", color: "#909090"},
+      {name: "Storms End", color: "#838383"},
     ];
   } else if (url === "purple") {
     return [
@@ -75,15 +75,15 @@ export default function getPalette(url) {
     ];
   } else if (url === "pink") {
     return [
-      {name: "", color: "#FF91B5"},
-      {name: "", color: "#FF78A4"},
-      {name: "", color: "#FF5E93"},
-      {name: "", color: "#FF4582"},
-      {name: "", color: "#FF5FBC"},
-      {name: "", color: "#FF45B1"},
-      {name: "", color: "#FF2CA6"},
-      {name: "", color: "#FF129C"},
-      {name: "", color: "#F80090"},
+      {name: "Porky Pig", color: "#FF91B5"},
+      {name: "Cherry Blossom", color: "#FF78A4"},
+      {name: "Cotton Candy", color: "#FF5E93"},
+      {name: "Orchid", color: "#FF4582"},
+      {name: "Fairy Tale", color: "#FF5FBC"},
+      {name: "Charming", color: "#FF45B1"},
+      {name: "Queen's Pink", color: "#FF2CA6"},
+      {name: "Barbie Doll", color: "#FF129C"},
+      {name: "Paradise", color: "#F80090"},
     ];
   } else if (url === "yellow") {
     return [
