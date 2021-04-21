@@ -37,10 +37,12 @@ a {
   width: fit-content;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
+  height: fit-content;
 }
 
 .thumbnail:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
+  transform: scale(1.025);
 }
 .row {
   display: flex;
@@ -48,6 +50,20 @@ a {
 .row span {
   height: 75px;
   width: 110px;
+}
+
+.row .top:first-child {
+  border-top-left-radius: 8px;
+}
+.row .top:nth-child(3) {
+  border-top-right-radius: 8px;
+}
+
+.row .bottom:first-child {
+  border-bottom-left-radius: 8px;
+}
+.row .bottom:nth-child(3) {
+  border-bottom-right-radius: 8px;
 }
 
 .title {
@@ -126,6 +142,10 @@ html {
 }
 .paletteRow span:hover .copySpan {
   opacity: 1;
+}
+
+.paletteThumbnail {
+  border-radius: 5px;
 }
 .copyMenu {
   position: fixed;
