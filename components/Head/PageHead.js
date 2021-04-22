@@ -6,30 +6,30 @@ export default function PageHead({title}) {
     <Head>
       <title>{title}</title>
       <link rel="icon" href="./color-palette.svg"></link>
-      <meta name="title" content="Color Bank — Find Your True Colours"></meta>
-      <meta property="image" content="/cb.PNG"></meta>
+      <meta name="title" content="Hue Hub — Find Your True Colours"></meta>
+      <meta property="image" content="/huehub.png"></meta>
       <meta
         property="keywords"
-        content="atkins,bank,black,blue,color,green,grey,noah,orange,pink,purple,yellow, noah atkins, color bank, color palette, colour bank"></meta>
+        content="atkins,bank,black,blue,color,green,grey,noah,orange,pink,purple,yellow, noah atkins, color bank, color palette, colour bank, hue, hue hub"></meta>
       <meta
         name="description"
-        content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
+        content="Hue Hub offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
 
       <meta property="og:type" content="website"></meta>
       <meta property="og:url" content="https://colorbank.noahatkins.com/"></meta>
-      <meta property="og:title" content="Color Bank — Find Your True Colours"></meta>
+      <meta property="og:title" content="Hue Hub — Find Your True Colours"></meta>
       <meta
         property="og:description"
-        content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
-      <meta property="og:image" content="./cb.PNG"></meta>
+        content="Hue Hub offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
+      <meta property="og:image" content="/huehub.png"></meta>
 
       <meta property="twitter:card" content="summary_large_image"></meta>
       <meta property="twitter:url" content="https://colorbank.noahatkins.com/"></meta>
-      <meta property="twitter:title" content="Color Bank — Find Your True Colours"></meta>
+      <meta property="twitter:title" content="Hue Hub — Find Your True Colours"></meta>
       <meta
         property="twitter:description"
-        content="Color bank offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
-      <meta property="twitter:image" content="/cb.PNG"></meta>
+        content="Hue Hub offers 8 color palettes ranging across the color spectrum designed to help you with you find your perfect project colors."></meta>
+      <meta property="twitter:image" content="/huehub.png"></meta>
     </Head>
   );
 }

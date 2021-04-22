@@ -8,9 +8,9 @@ export default function Home() {
   const {theme, switchTheme} = useContext(ThemeContext);
   return (
     <div className="homeWrap">
-      <PageHead title="Color Bank" />
+      <PageHead title="Hue Hub" />
       <div className="homeHeader">
-        <h1 className={styles.title}>Color Bank — Find Your True Colours</h1>
+        <h1 className={styles.title}>Hue Hub — Find Your True Colours</h1>
         <div>
           <label className="switch">
             <input
