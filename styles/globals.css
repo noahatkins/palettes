@@ -247,6 +247,10 @@ h4:hover {
 .paletteTitle {
   justify-content: end;
 }
+
+.paletteTitle h2 {
+  margin-left: auto;
+}
 .paletteHeader div:first-child {
   margin-right: auto;
 }
