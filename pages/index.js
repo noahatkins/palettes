@@ -41,7 +41,7 @@ export default function Home() {
         <Thumbnail path="/palette/black" title="Black" color="black" />
       </div>
       <div className="homeFooter">
-        <span>© 2021 Hue Hub</span>
+        <span>© {new Date().getFullYear()} Hue Hub</span>
       </div>
     </div>
   );

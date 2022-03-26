@@ -5,9 +5,9 @@ import {ThemeContext} from "../contexts/ThemeStore";
 export const themes = {
   light: {
     primary: "#f7f1e3",
-    secondary: "#1e272e",
+    secondary: "#1a1c23", //#1a1c23 #1e272e
   },
-  dark: {primary: "#1e272e", secondary: "#f7f1e3"},
+  dark: {primary: "#1a1c23", secondary: "#f7f1e3"},
 };
 
 const GlobalStyle = createGlobalStyle`
